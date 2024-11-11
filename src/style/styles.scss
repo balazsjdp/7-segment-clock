@@ -1,0 +1,130 @@
+$background: #2e2c2f;
+$offColor: #444046;
+$onColor: #60ad6e;
+
+body {
+  background-color: $background;
+}
+
+.clock {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.number {
+  height: 200px;
+  width: 100px;
+  display: block;
+  position: relative;
+}
+
+.segment {
+  position: absolute;
+}
+
+.segment-on {
+  border-color: $onColor !important;
+
+  span {
+    border-color: $onColor !important;
+  }
+}
+
+.segment-off {
+  border-color: $offColor !important;
+
+  span {
+    border-color: $offColor !important;
+  }
+}
+
+.segment-ver {
+  height: 60px;
+  width: 0;
+  border-right: 8px solid;
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+
+  transition:
+    border-top-color 0.2s ease-in-out,
+    border-right-color 0.2s ease-in-out,
+    border-bottom-color 0.2s ease-in-out,
+    border-left-color 0.2s ease-in-out;
+}
+.segment-ver span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-left: 8px solid;
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  transform: translate(8px, -8px);
+
+  transition:
+    border-top-color 0.2s ease-in-out,
+    border-right-color 0.2s ease-in-out,
+    border-bottom-color 0.2s ease-in-out,
+    border-left-color 0.2s ease-in-out;
+}
+
+.segment-hor {
+  width: 50%;
+  height: 0;
+  border-bottom: 8px solid;
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+
+  transition:
+    border-top-color 0.2s ease-in-out,
+    border-right-color 0.2s ease-in-out,
+    border-bottom-color 0.2s ease-in-out,
+    border-left-color 0.2s ease-in-out;
+}
+.segment-hor span {
+  display: block;
+  width: 100%;
+  height: 0;
+  border-top: 8px solid;
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  transform: translate(-8px, 8px);
+
+  transition:
+    border-top-color 0.2s ease-in-out,
+    border-right-color 0.2s ease-in-out,
+    border-bottom-color 0.2s ease-in-out,
+    border-left-color 0.2s ease-in-out;
+}
+
+.segment-0 {
+}
+
+.segment-1 {
+  top: 0;
+  transform: translate(12px, -9px);
+}
+
+.segment-2 {
+  transform: translate(74px, 0);
+}
+
+.segment-3 {
+  top: 0;
+  transform: translate(12px, 69px);
+}
+
+.segment-4 {
+  top: 50%;
+  transform: translate(0px, -22px);
+}
+
+.segment-5 {
+  top: 50%;
+  transform: translate(12px, 47px);
+}
+
+.segment-6 {
+  top: 50%;
+  transform: translate(74px, -22px);
+}
